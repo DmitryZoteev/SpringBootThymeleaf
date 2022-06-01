@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Found employee</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Result</h1>
+<table>
+<tr>
+    <th>Surname</th>
+    <th>Name</th>
+    <th>Patronymic</th>
+    <th>Age</th>
+    <th>Salary</th>
+    <th>Email</th>
+    <th>Location</th>
+</tr>
+<tr th:each ="employee : ${employees}">
+    <td th:utext="${employee.surname}">...</td>
+    <td th:utext="${employee.name}">...</td>
+    <td th:utext="${employee.patronymic}">...</td>
+    <td th:utext="${employee.age}">...</td>
+    <td th:utext="${employee.salary}">...</td>
+    <td th:utext="${employee.email}">...</td>
+    <td th:utext="${employee.location}">...</td>
+</tr>
+</table>
+<a href="/employee">To main</a>
+<p th:utext="${lastAccessedTime}">...</p>
+<p th:utext="${userAgent}">...</p>
+</body>
+</html>
